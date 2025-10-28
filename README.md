@@ -18,7 +18,7 @@ ShopSmart is a simple e-commerce website where users can browse products, filter
 
 ## Pages
 
--index.html` - Homepage with product listing
-- wishlist.html` - Wishlist page
-- about.html` - About page
+-index.html  - Homepage with product listing
+- wishlist.html  - Wishlist page
+- about.html  - About page
 
