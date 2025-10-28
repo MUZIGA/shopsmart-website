@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist - ShopSmart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">ShopSmart Wishlist</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="hover:text-blue-500">Home</a>
+      <a href="about.html" class="hover:text-blue-500">About</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow p-8">
+    <h3 class="text-3xl font-semibold mb-6 text-center text-blue-600">My Wishlist </h3>
+    <div id="wishlist-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    <p id="empty-message" class="text-center text-gray-500 mt-6 hidden">Your wishlist is empty </p>
+  </main>
+
+  <footer class="bg-white shadow-inner p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2025 ShopSmart | Created by Judith </p>
+  </footer>
+
+  
+  <script type="module">
+    import { renderWishlist } from './js/wishlist.js';
+
+    const container = document.getElementById("wishlist-container");
+    const emptyMessage = document.getElementById("empty-message");
+    renderWishlist(container);
+
+    
+    if (container.children.length === 0) {
+      emptyMessage.classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
